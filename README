@@ -1,0 +1,27 @@
+Image Swap has only been tested on a LEMP server. 
+
+1. You will need to have the following PHP libraries and extensions installed:
+- Imagemagick
+- PDO
+
+2. Create the following tables in your database
+
+	CREATE TABLE res(id INT NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY(id),name VARCHAR(16),ext VARCHAR(4), ip VARCHAR(45), time INT);
+	
+	CREATE TABLE user(id INT NOT NULL AUTO_INCREMENT, 
+	PRIMARY KEY(id),user VARCHAR(32), pass CHAR(65), auth_time INT, 
+	auth_key VARCHAR(64), auth_ip VARCHAR(45));
+	
+	CREATE TABLE ban(id INT NOT NULL AUTO_INCREMENT, 
+	PRIMARY KEY(id),ip VARCHAR(45), time INT);
+
+3. Edit config.php to fit your database name and server paths
+
+4. If you would like to use the admin panel, add a user
+
+	INSERT INTO user (user,pass) VALUES ('username','sha256_hashed_passwd');
+
+5. The res directory must have write permissions
+
+

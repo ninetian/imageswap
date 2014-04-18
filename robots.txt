@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /account.php
+Disallow: /login.php
+Disallow: /*.gif$
+Disallow: /*.jpg$
+Disallow: /*.png$
