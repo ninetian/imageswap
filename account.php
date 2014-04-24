@@ -130,7 +130,7 @@
 				if(isset($image[0]['name']))
 				{	
 					echo '<div style="width:200px;border: solid 1px;padding:5px;">';
-					echo '<a href="http://'.$domain.'/res/'.$image[0]['name'].'_thumb.'.$image[0]['ext'].'" target="_blank">'.$image[0]['name'].'.'.$image[0]['ext'].'</a> Uploaded by <br/>'.$image[0]['ip'].'<br/><br/> 
+					echo '<a href="http://'.$domain.'/res/'.$image[0]['name'].'.'.$image[0]['ext'].'" target="_blank">'.$image[0]['name'].'.'.$image[0]['ext'].'</a> Uploaded by <br/>'.$image[0]['ip'].'<br/><br/> 
 					<form action="account.php" method="post"><input type="hidden" name="delete" value="'.$image[0]['name'].'"/><input type="submit" value="Delete" class="button1"/></form>
 					</div>';
 				}
@@ -150,7 +150,7 @@
 				
 				while(isset($image[$count]['id']))
 				{
-					echo '<p><a href="http://'.$domain.'/res/'.$image[$count]['name'].'_thumb.'.$image[$count]['ext'].'" target="_blank">'.$image[$count]['name'].'.'.$image[$count]['ext'].'</a> 
+					echo '<p><a href="http://'.$domain.'/res/'.$image[$count]['name'].'.'.$image[$count]['ext'].'" target="_blank">'.$image[$count]['name'].'.'.$image[$count]['ext'].'</a> 
 					<form action="account.php" method="post"><input type="hidden" name="imageip" value="'.$image[$count]['ip'].'"/><input type="hidden" name="delete" value="'.$image[$count]['name'].'"/> <input type="submit" value="Delete" class="button1"/></form>';
 					
 					++$count;
@@ -166,7 +166,7 @@
 			$count = 0;
 			while(isset($image[$count]['id']))
 			{
-				echo '<p><a href="http://'.$domain.'/res/'.$image[$count]['name'].'_thumb.'.$image[$count]['ext'].'" target="_blank">'.$image[$count]['name'].'.'.$image[$count]['ext'].'</a> 
+				echo '<p><a href="http://'.$domain.'/res/'.$image[$count]['name'].'.'.$image[$count]['ext'].'" target="_blank">'.$image[$count]['name'].'.'.$image[$count]['ext'].'</a> 
 					<form action="account.php" method="post"><input type="hidden" name="delete" value="'.$image[0]['name'].'"/> '.$image[0]['ip'].' <input type="submit" value="Delete" class="button1"/></form>';
 					
 					++$count;
